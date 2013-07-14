@@ -1,0 +1,5 @@
+git log -p --color
+
+Create repo on github.com, then on EC2
+git remote add origin git@github.com:startup-class/myrepo.git
+git push -u origin master

@@ -1,0 +1,185 @@
+# 1) Install heroku and git
+5 $ sudo apt-get install -y git-core
+6 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+7 $ which git
+8 $ which heroku
+9 # 2) Login and set up your SSH keys
+10 $ heroku login
+11 $ ssh-keygen -t rsa
+12 $ heroku keys:add
+13 # 3) Clone a sample repo and push to heroku
+14 $ git clone https://github.com/heroku/node-js-sample.git
+15 $ cd node-js-sample
+16 $ heroku create
+17 $ git push heroku master
+
+ubuntu@ip-172-31-29-253:~/node-js-sample$ heroku create
+Creating hidden-badlands-3945... done, region is us
+http://hidden-badlands-3945.herokuapp.com/ | git@heroku.com:hidden-badlands-3945.git
+Git remote heroku added
+
+-----------------------
+sudo apt-get update
+sudo apt-get install python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+
+=====================================
+~/.ssh/config
+
+# -- Execute on local machine
+2 $ mkdir -p ~/.ssh
+3 $ cp ~/downloads/skey.pem ~/.ssh/
+4 $ chmod 400 ~/.ssh/skey.pem
+5 $ chmod 700 ~/.ssh
+6 $ nano ~/.ssh/config # edit the file as shown below
+7 $ cat ~/.ssh/config
+8 Host awshost1
+9 HostName ec2-54-218-35-71.us-west-2.compute.amazonaws.com
+10 User ubuntu
+11 IdentityFile "~/.ssh/skey.pem"
+
+===============================
+http://www.catonmat.net/download/bash-history-cheat-sheet.pdf
+
+$SYSTEMROOT/system32/ping google.com
+
+find /home -iname cs184-malvin2.pem
+
+tar -cvf genome.tar genome
+gzip genome.tar
+2 md temp
+3 cp genome.tar.gz temp
+4 cd temp
+5 tar -xzvf genome.tar.gz # without fully uncompressing
+6 cd ..
+7 gunzip genome.tar.gz
+8 rm -rf genome.tar genome temp
+9 wget ftp://ftp.ncbi.nih.gov/genomes/Homo_sapiens/CHR_22/hs_ref_GRCh37.p10_chr22.fa.gz
+10 zcat hs_ref_GRCh37.p10_chr22.fa.gz | nl | head -1000 | tail -20
+
+http://blog.linuxacademy.com/linux/connect-to-amazon-ec2-using-putty-private-key-on-windows/
+
+http://www.gnu.org/software/emacs/tour/
+http://www.rgrjr.com/emacs/emacs_cheat.html
+
+http://www.emacswiki.org/emacs/EmacsNiftyTricks
+http://www.emacswiki.org/emacs/NoTabs
+    (setq-default indent-tabs-mode nil)
+
+:setl noai nocin nosi inde=
+
+c-x 3 split window
+c-c ! node repl, .help
+m-i, m-o switch buffer
+c-C, c-J copy line to REPL
+c-@ to mark
+c-C, c-R copy entire region
+c-x h, highlight the whole buffer
+
+==========================
+#Changes to ubuntu to improve colors
+#Troubled by emacs tabs, finally use m-x untabify to convert tabs to spaces
+#In .vimrc added ":color koehler"
+#modified cygwin options
+
+
+[ubuntu@ip-172-31-19-23:~]$diff .bashrc-teachers .bashrc
+76a77,105
+> # --------------
+> # Added by JL
+> #
+> # ANSI color codes
+> # example
+> #PS1="$HC$FYEL[ $FBLE${debian_chroot:+($debian_chroot)}\u$FYEL: $FBLE\w $FYEL]\\$ $RS"
+> #PS2="$HC$FYEL&gt; $RS"
+>
+> RS="\[\033[0m\]"    # reset
+> HC="\[\033[1m\]"    # hicolor
+> UL="\[\033[4m\]"    # underline
+> INV="\[\033[7m\]"   # inverse background and foreground
+> FBLK="\[\033[30m\]" # foreground black
+> FRED="\[\033[31m\]" # foreground red
+> FGRN="\[\033[32m\]" # foreground green
+> FYEL="\[\033[33m\]" # foreground yellow
+> FBLE="\[\033[34m\]" # foreground blue
+> FMAG="\[\033[35m\]" # foreground magenta
+> FCYN="\[\033[36m\]" # foreground cyan
+> FWHT="\[\033[37m\]" # foreground white
+> BBLK="\[\033[40m\]" # background black
+> BRED="\[\033[41m\]" # background red
+> BGRN="\[\033[42m\]" # background green
+> BYEL="\[\033[43m\]" # background yellow
+> BBLE="\[\033[44m\]" # background blue
+> BMAG="\[\033[45m\]" # background magenta
+> BCYN="\[\033[46m\]" # background cyan
+> BWHT="\[\033[47m\]" # background white
+>
+165c194,195
+< PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+---
+> #PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+> PS1="\[\033[0;32m\][\u@\h:\w]$\[\033[0m\]"
+
+
+
+[ubuntu@ip-172-31-19-23:~/dotfiles/.emacs.d]$diff init.el.teachers init.el
+71c71,75
+< (global-set-key "\C-m" 'newline-and-indent)
+---
+> ;;(global-set-key "\C-m" 'newline-and-indent)
+> ;;(global-set-key (kbd "RET") 'reindent-then-newline-and-indent)
+> (global-set-key (kbd "RET") 'newline-and-indent)
+>
+> (setq-default indent-tabs-mode nil)
+
+
+
+
+--------------------------------------------------
+
+You may also customize the ‘indent-tabs-mode’ variable instead, obviously. If you want to remove tabs in an existing file, mark the whole buffer using C-x h and use M-x untabify. (M-x tabify does the opposite …)
+
+:for vi, :se noai noexpandtab
+
+
+-----------------------
+wget https://spark-public.s3.amazonaws.com/startup/code/bitstarter.html
+
+diff -c --suppress-common-lines --ignore-tab-expansion --ignore-space-change --ignore-blank-lines bitstarter.html index.html
+
+-----------------------
+http://gitref.org/basic/
+
+------------------------------
+./configure --prefix=$HOME/mydir; make; make install is the preferred
+way to safely install things from source.
+
+---------------------------------
+1) User data was generated using:
+https://github.com/lionaneesh/coursera-forum-user-crawler
+2) The webpage source:
+https://github.com/lionaneesh/coursera-forum-user-crawler [using a hacked
+version of https://github.com/blueimp/Bootstrap-Image-Gallery]
+
+----------------------
+Peter Thiel CS183 notes
+https://dl.dropboxusercontent.com/u/15967585/cs183%20thiel_class.pdf
+
+----------------------
+http://productivity.ben61a.com/windows/windows-7-shortcut-keys.php
+
+--------------------------
+http://jsapp.us/
+jsfiddle.net
+
+http://www.calottery.com/sitecore/content/Miscellaneous/download-numbers/\?GameName\=fantasy-5
+
+https://hacks.mozilla.org/2013/07/so-you-wanna-build-a-crowdfunding-site
+
+http://www.w3resource.com/twitter-bootstrap/responsive-design.php
+
+https://github.com/paulrobertlloyd/roadtrip/
+
+iconv --from-code=ISO-8859-1 --to-code=UTF-8 ./index.html > ./newIndex.html
