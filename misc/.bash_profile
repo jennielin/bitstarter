@@ -70,3 +70,9 @@ parse_git_branch() {
 }
 
 export PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \W \[\033[31m\]\$(parse_git_branch) \[\033[00m\]$\[\033[00m\] "
+
+#function parse_git_branch_and_add_brackets {
+    #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
+#}
+
+#PS1="\w\[\033[0;32m\]\$(parse_git_branch_and_add_brackets) \[\033[0m\]\$ "

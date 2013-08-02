@@ -180,6 +180,22 @@ https://hacks.mozilla.org/2013/07/so-you-wanna-build-a-crowdfunding-site
 
 http://www.w3resource.com/twitter-bootstrap/responsive-design.php
 
-https://github.com/paulrobertlloyd/roadtrip/
 
 iconv --from-code=ISO-8859-1 --to-code=UTF-8 ./index.html > ./newIndex.html
+-------------------
+http://vijayannadi.wordpress.com/tutorials/sample-chat-app-using-nodejs-socketio/
+HTML canvas http://www.youtube.com/watch?v=T2lBVYrtPO8
+Meteor-pen (realtime drawing board): https://github.com/jpsarda/meteor-pen
+
+Meteor-chat (realtime chat)
+https://github.com/applepicke/meteor-chat
+
+http://twitter.github.io/bootstrap/javascript.html#carousel
+
+http://www.movements.org/how-to/entry/how-to-set-up-a-text-to-donate-program-for-your-organization/
+
+Capturing Audio & Video in HTML5
+http://www.html5rocks.com/en/tutorials/getusermedia/intro/
+
+MongoDB Performance
+http://devarts.esser.ro/

@@ -97,6 +97,21 @@
       .footer a {
         color: #ccccff;
       }
+
+      .artist {
+        padding: 1% 0%;
+        text-align: left;
+      }
+      .artist .name {
+        margin-top:2.5%;
+      }
+      .artist .photo {
+        margin-right:2.5%;
+        border-radius:100%;
+        float:left;
+      }
+
+
     </style>
   </head>
   <body>
@@ -146,33 +161,35 @@
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
           <!--<img class="img-polaroid" src="http://placehold.it/480x300">-->
-          <img class="img-polaroid" style="height:auto; width:auto; max-width:480; max-height:300px;" src="http://upload.wikimedia.org/wikipedia/en/thumb/7/73/Cur_eg.svg/500px-Cur_eg.svg.png">
+          <img class="img-polaroid" alt="Placeholder" style="height:auto; width:auto; max-width:480; max-height:300px;" src="http://upload.wikimedia.org/wikipedia/en/thumb/7/73/Cur_eg.svg/500px-Cur_eg.svg.png">
         </div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
                 <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
+                  <h3>100</h3> <p>mentions</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
+                  <h3>60</h3> <p>of 100</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
+                  <h3>10</h3> <p>days left</p>
                 </div>
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
@@ -181,17 +198,23 @@
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <button class="btn btn-success btn-large">Preorder</button>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
             <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
             <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -200,34 +223,64 @@
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <!--<img class="img-polaroid" src="http://placehold.it/480x300">-->
-          <img class="img-polaroid" style="height:auto; width:auto; max-width:480; max-height:300px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/LantingXu.jpg/640px-LantingXu.jpg">
-        </div>
-        <div class="span5 copy">
+        <div class="span5 offset1 copy">
           <p>
             <b>What is this site all about?</b>
 
             Many famous Chinese calligraphy work has been trace copied or
-            engraved into stone for posterity, however damages to them are
-            also inevitable.  It is a cherished undertaking to 
-            take such a copy and restore it to a vivid look following
-            the artist's intent and spirit.
+            engraved into stone for posterity, nevertheless some regretably
+            had suffered damaages.  It is always a cherished undertaking
+            to examine the damaged portion and restore it to the original vivid
+            look based on the artist's intent and spirit.
           </p>
+          <p>
+            This site helps one to upload a restored character.  When you share
+            it, it enables other like-minded calligraphy hobbyists to use it,
+            learn from it and be inspired by it around the globe.  So don't wait ..
+            brush away ... the little artist is in you!
+          </p>
+        </div>
+        <div class="span5 asset">
+          <!--<img class="img-polaroid" src="http://placehold.it/480x300">-->
+          <img class="img-polaroid" alt="Placeholder" src="http://blog.asianart.org/blog/wp-content/uploads/2012/08/AAM_Out-of-Character_Peng_Thousand_EX-2012.2.028_01.jpg">
         </div>
       </div>
 
       <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            This site demonstrate how one might do digital alteration, 
-            saving and exchanging the result with other like-minded
-            peers.  So brush away ... find the little artist in you!
-          </p>
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid" alt="Placeholder" style="height:auto; width:auto; max-width:480; max-height:300px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/LantingXu.jpg/640px-LantingXu.jpg">
         </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://blog.asianart.org/blog/wp-content/uploads/2012/08/AAM_Out-of-Character_Peng_Thousand_EX-2012.2.028_01.jpg">
+        
+        <div class="span5 artist">
+          <h3>Calligraphy Enthusiast</h3>
+          <ul class="artists">
+              <ul class="artist">
+                  <img class="photo" src="http://placehold.it/56x56" alt="" width="56" height="56"/>
+                  <h4 class="name">Jennifer</h4>
+                  <p>
+                  </p>
+              </ul>
+              <ul class="artist">
+                  <img class="photo" src="http://placehold.it/56x56" alt="" width="56" height="56"/>
+                  <h4 class="name">Little Wayne</h4>
+                  <p>
+                  </p>
+              </ul>
+              <ul class="artist">
+                  <img class="photo" src="http://placehold.it/56x56" alt="" width="56" height="56"/>
+                  <h4 class="name">Romeo</h4>
+                  <p>
+                  </p>
+              </ul>
+          </ul>
         </div>
+        <!--<div class="span5 offset1 copy copy-right">
+          xxxxx
+        </div>
+        http://stackoverflow.com/questions/13329557/transitioning-bootstraps-img-circle-to-img-rounded-gradually
+        http://stackoverflow.com/questions/11075560/how-do-i-use-popover-from-twitter-bootstrap-to-display-an-image
+        -->
+
       </div>
 
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
@@ -272,13 +325,19 @@
       <!-- http://creativecommons.org/licenses/ -->
       <div class="row-fluid footer">
         <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0
+          <p>
+            Copyright (C) on all images and content.
+          </p>
+          <p>
+            Software is licensed under the
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0
             </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
+            put at the bottom of the page.
+          </p>
         </div>
       </div>
     </div>
   </body>
 </html>
+
+
