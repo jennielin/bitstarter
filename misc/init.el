@@ -1,5 +1,7 @@
 ;; -*- mode: emacs-lisp -*-
 ;; Simple .emacs configuration
+;;
+;; ./dotfiles/.emacs.d/init.el
 
 ;; ---------------------
 ;; -- Global Settings --
